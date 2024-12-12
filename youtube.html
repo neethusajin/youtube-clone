@@ -1,0 +1,496 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Youtube Clone with HTML & CSS</title>
+  </head>
+  <body>
+      <header class="header">
+            <div class="logo left">
+              <i id="menu" class="material-icons">menu</i>
+              <img src="./assets/yt-logo.png">
+            </div>
+           
+            <div class="search center">
+              <form action="">
+                <input type="text" placeholder="Search" />
+                <button><i class="material-icons">search</i></button>
+              </form>
+              <i class="material-icons mic">mic</i>
+            </div>
+           
+            <div class="icons right">
+              <i class="material-icons">videocam</i>
+              <i class="material-icons">apps</i>
+              <i class="material-icons">notifications</i>
+              <i class="material-icons display-this">account_circle</i>
+            </div>
+      </header>
+      <main>
+         
+
+
+<div class=”side-bar”>
+    <div class="nav">
+       <a class="nav-link active">
+          <i class="material-icons">home</i>
+          <span>Home</span>
+       </a>
+       <a class="nav-link">
+          <i class="material-icons">local_fire_department</i>
+          <span>Shorts</span>
+       </a>
+       <a class="nav-link">
+          <i class="material-icons">subscriptions</i>
+          <span>Subscriptions</span>
+       </a>
+     </div>
+     <hr>
+     <!-- <div class="nav">
+     hr -->
+     <div class="heading">
+        <h3> You > </h3>
+     </div>
+    <a class="nav-link">
+        <i class="material-icons">library_add_check</i>
+        <span>Library</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">history</i>
+        <span>History</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">play_arrow</i>
+        <span>Your Videos</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">watch_later</i>
+        <span>Watch Later</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">thumb_up</i>
+        <span>Liked Videos</span>
+     </a>
+     <hr>
+ <!-- </div> -->
+
+  <!-- <div class="nav">
+     hr -->
+     <div class="heading">
+        <h3> Explore </h3>
+     </div>
+     
+    <a class="nav-link">
+        <i class="material-icons">local_fire_department</i>
+        <span>Treanding</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">local_mall</i>
+        <span>Shopping</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">music_note</i>
+        <span>Music</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">movie</i>
+        <span>Movies</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">sports_esports</i>
+        <span>Games</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">emoji_events</i>
+        <span>Sports</span>
+     </a>
+     <a class="nav-link">
+        <i class="material-icons">podcasts</i>
+        <span>Podcasts</span>
+     </a>
+ <!-- </div> -->
+
+    </div>
+
+    
+
+          
+          <div class="content">
+
+            <div class="videos">
+                <!-- a video starts -->
+                  <div class="video">
+                     <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/OG2yCbwi0Uo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCzPnXes_YF6sO3ffUwDBYsb2f6WA" alt="" />
+                      </div>
+              
+                        <div class="details">
+                           <div class="author">
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYCHdBpfmXOEWBA4cnkAMJrwFjfXMnOwUZYg&s" alt="" />
+                           </div>
+                           <div class="title">
+                              <h3>
+                                Good Vibes Music 🍇 Spotify Playlist Chill Vibes | Latest English Songs With Lyrics
+                               </h3>
+                               <a href="">
+                                      Technichal Reaserch
+                                </a>
+                                <span> 2M Views • 3 Months Ago </span>
+                           </div>
+                         </div>
+              
+                       </div>
+                 <!-- a video Ends -->
+                  <!-- a video starts -->
+                  <div class="video">
+                    <div class="thumbnail">
+                       <img src="data:image/jpeg;base64,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" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="data:image/png;base64,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" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                IDENTITY Teaser | Tovino Thomas | Trisha | Vinay Rai | Akhil Paul | Anas Khan
+                              </h3>
+                              <a href="">
+                                     Filmy gang
+                               </a>
+                               <span> 2M Views • 3 Days Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/36XSsACo68g/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUa1vvMvAXHRdYtgXJApwfPHjYUmZWLN6HSg&s" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                Dominic and The Ladies Purse Official Teaser | Mammootty | Gautham Vasudev Menon | MammoottyKampany
+                              </h3>
+                              <a href="">
+                                     Francesco Ciulla
+                               </a>
+                               <span> 1.2M Views • 4 Days Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/KunQLjwmbGk/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://img.freepik.com/premium-photo/lofi-wallpaper-featuring-vinyl-record-playing-turntable-with-blurred-warm-light-cozy-vin_879736-83087.jpg" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                Dekho Na Dekho Na zulfon Say | Slowed Reverb | Lofi Player
+                              </h3>
+                              <a href="">
+                                     Lofi Player
+                               </a>
+                               <span> 559K Views • 1 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/6C3DPSqCp0g/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://yt3.googleusercontent.com/3DRUt5KO_LXyMLwHhWju7hfV6o4dLA05TTgwlV2qGrTt_80QsU3yjBK6_SATLIdG8EHlljulrg=s900-c-k-c0x00ffffff-no-rj" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                Life in the Coldest Village on Earth −71°C (−95°F) A Journey Through All Four Seasons
+                              </h3>
+                              <a href="">
+                                     Kuin B
+                               </a>
+                               <span> 6.9M Views • 1 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+               </div>
+
+
+               <div class="videos">
+                <!-- a video starts -->
+                  <div class="video">
+                     <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/gPpQNzQP6gE/maxresdefault.jpg" alt="" />
+                      </div>
+              
+                        <div class="details">
+                           <div class="author">
+                              <img src="https://yt3.googleusercontent.com/peAB9QPekqxbgVC2k0Fklzw8fzyBI1T-mBvReuXbmO9swjl-laqMo4WJSqrisuLdWg1NxV-o6w=s900-c-k-c0x00ffffff-no-rj" alt="" />
+                           </div>
+                           <div class="title">
+                              <h3>
+                                Akshath - Nadaaniyan (Official Video) Aisha Ahmed
+                               </h3>
+                               <a href="">
+                                      
+                                    Akshath Acharya
+                                </a>
+                                <span> 112M Views • 5 Months Ago </span>
+                           </div>
+                         </div>
+              
+                       </div>
+                 <!-- a video Ends -->
+                  <!-- a video starts -->
+                  <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/k9ZAH37doTc/hqdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://m.media-amazon.com/images/I/61iHGfBZoJL._AC_UF1000,1000_QL80_.jpg" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                The Path to Black Uniform | Inside NSG | हिंदी | S1 - E1 | Nat Geo
+                              </h3>
+                              <a href="">
+                                    National Geographic India
+                               </a>
+                               <span> 418K Views • 1 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/AUMpaYtV19M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCTb-UQQ18Wxyr0dOE6azRd9NGglQ" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://yt3.googleusercontent.com/4eEETdAR33227A9KRhQ1T4P2NyYReiZKMeaN_rZ8QZ1LSCLUudaggLhZ1C40RkDyw6SejAmW=s900-c-k-c0x00ffffff-no-rj" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                NOOL PAROTTA | Thread Parotta Recipe Cooking In Village | Lachha Paratha | Soft Layered Parotta
+                              </h3>
+                              <a href="">
+                                     Village Cooking Channel
+                               </a>
+                               <span> 11M Views • 1 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/Rwe5Aw3KPHY/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://yt3.googleusercontent.com/gEuga1T09RrSUwzWCqgkQdpNgQvyVQ7u5RZ-_1tPLd4nI-l0riEpLGUgQI7UlSXm9B7DlmkEyw=s900-c-k-c0x00ffffff-no-rj" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                WILD WORLD DOLBY VISION™ | EXTREME COLORS [8K HDR]
+                              </h3>
+                              <a href="">
+                                8k Paradise
+                               </a>
+                               <span> 22M Views • 11 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/6d5SS0gS5bU/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://assets-prod.zee.com/uploads/imgo.jpeg" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                Tainu Khabar Nahi - Arijit Singh | Munjya | Sharvari, Abhay Verma| Sachin-Jigar,Amitabh Bhattacharya
+                              </h3>
+                              <a href="">
+                                     Zee Music
+                               </a>
+                               <span> 101M Views • 6 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+               </div>
+
+
+
+
+               <div class="videos">
+                <!-- a video starts -->
+                  <div class="video">
+                     <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/z_Mo697_bdI/maxresdefault.jpg" alt="" />
+                      </div>
+              
+                        <div class="details">
+                           <div class="author">
+                              <img src="https://yt3.googleusercontent.com/NO39GWEamFGWKZfYbwRX2twpWOkKBURVTAx2-T97vQJmT1LDtaScNCD-skJJvBMczYnB_5j4=s900-c-k-c0x00ffffff-no-rj" alt="" />
+                           </div>
+                           <div class="title">
+                              <h3>
+                                Extra Decent Official Trailer | Listin Stephen | Suraj Venjaramoodu | Aamir Pallikkal
+                               </h3>
+                               <a href="">
+                                      Magic Frame Music
+                                </a>
+                                <span> 925K Views • 4 Days Ago </span>
+                           </div>
+                         </div>
+              
+                       </div>
+                 <!-- a video Ends -->
+                  <!-- a video starts -->
+                  <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/lU-csIO1x0E/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://i.ytimg.com/vi/pxq5W0tgb5A/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCf4X_pYf-F9TzYK4A0mB_pk0-JJg" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                Stephen Sanchez, Em Beihold - Until I Found You (Lyrics)(I would never fall in love again)
+                              </h3>
+                              <a href="">
+                                     Alpha Noise
+                               </a>
+                               <span> 15M Views • 1 Year Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/AFTIVN8rRbI/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://i.pinimg.com/736x/d5/b1/28/d5b12845a0f69f6dc60f4c18d8de7201.jpg" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                Sajni (Song): Arijit Singh, Ram Sampath | Laapataa Ladies | Aamir Khan Productions
+                              </h3>
+                              <a href="">
+                                     T-Series
+                               </a>
+                               <span> 124M Views • 9 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/gPck5DSFygY/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://img.freepik.com/free-vector/8k-ultra-hd-video-resolution-sticker-design_1017-54603.jpg" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                Underwater World OLED Demo HDR 8K Ultra HD Dolby Vision™ 60fps
+                              </h3>
+                              <a href="">
+                                     8K Clarity
+                               </a>
+                               <span> 5.1M Views • 3 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+                 <!-- a video starts -->
+                 <div class="video">
+                    <div class="thumbnail">
+                       <img src="https://i.ytimg.com/vi/e1BHIY9p2WU/maxresdefault.jpg" alt="" />
+                     </div>
+             
+                       <div class="details">
+                          <div class="author">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEAEXLa2SfRw4VuxW07V3f-qiihGMiAf1cng&s" alt="" />
+                          </div>
+                          <div class="title">
+                             <h3>
+                                Eyy Banane - Video | Vaazha | Vipin Das | Anand Menen | Electronic Kili |Siju Sunny |Joemon Jyothir
+                              </h3>
+                              <a href="">
+                                Think Music India
+                               </a>
+                               <span> 3M Views • 3 Months Ago </span>
+                          </div>
+                        </div>
+             
+                      </div>
+                <!-- a video Ends -->
+               </div>
+
+
+
+
+          </div>
+
+          
+      </main>
+  <!-- Main Body Ends -->
+  
+
+
+</body>
+</html>
